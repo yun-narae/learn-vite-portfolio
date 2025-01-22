@@ -5,10 +5,14 @@ export function menu() {
 
     // 메뉴 토글 버튼 클릭 시 메뉴 열고 닫기
     headerToggle.addEventListener("click", (e) => {
+        // 메뉴 열고 닫기
         headerNav.classList.toggle("show");
 
-        // 메뉴가 열릴 때 tabIndex를 설정하여 tab 순서 조정
+        // aria-expanded 속성 값 토글
         if (headerNav.classList.contains("show")) {
+            headerToggle.setAttribute("aria-expanded", "true");
+
+            // 메뉴가 열릴 때 tabIndex를 설정하여 tab 순서 조정
             navItems.forEach((item, index) => {
                 item.setAttribute("tabindex", index + 1); // 탭 순서 설정
             });
@@ -16,6 +20,8 @@ export function menu() {
             // 메뉴가 열리면 첫 번째 항목에 포커스를 설정
             navItems[0].focus();
         } else {
+            headerToggle.setAttribute("aria-expanded", "false");
+
             // 메뉴가 닫히면 tabIndex를 제거
             navItems.forEach(item => {
                 item.removeAttribute("tabindex");
@@ -33,6 +39,9 @@ export function menu() {
             navItems.forEach(item => {
                 item.removeAttribute("tabindex"); // 메뉴 닫히면 tabindex 제거
             });
+
+            // aria-expanded를 false로 설정
+            headerToggle.setAttribute("aria-expanded", "false");
         }
     });
 
@@ -40,7 +49,7 @@ export function menu() {
     headerNav.addEventListener("click", (e) => {
         e.stopPropagation();
     });
-    
+
     // 화면 크기가 801px 이상일 때 메뉴가 열려 있으면 'show' 클래스를 제거
     window.addEventListener("resize", () => {
         if (window.innerWidth >= 801) {
@@ -48,6 +57,9 @@ export function menu() {
             navItems.forEach(item => {
                 item.removeAttribute("tabindex"); // 메뉴 닫히면 tabindex 제거
             });
+
+            // aria-expanded를 false로 설정
+            headerToggle.setAttribute("aria-expanded", "false");
         }
     });
 
@@ -58,6 +70,9 @@ export function menu() {
             headerNav.classList.remove('show'); // 메뉴 닫기
             headerToggle.focus(); // 메뉴가 닫힌 후 headerToggle로 포커스 이동
             e.preventDefault();
+
+            // aria-expanded를 false로 설정
+            headerToggle.setAttribute("aria-expanded", "false");
         }
     });
 };
