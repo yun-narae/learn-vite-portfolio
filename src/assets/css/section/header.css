@@ -10,8 +10,8 @@
     display: flex;
     justify-content: space-between;
     align-items: center;
-    background-color: rgba(116, 99, 99, 0.1);
-    backdrop-filter: blur(10px);
+    /* background-color: rgba(116, 99, 99, 0.1); */
+    /* backdrop-filter: blur(10px); */
     padding: 1rem;
 }
 
@@ -19,16 +19,22 @@
     font-size: 1rem;
     text-align: center;
     text-transform: uppercase;
+    color: var(--black);
 }
 
 .header__logo em {
-    font-size: 10px;
-    color: var(--black200);
+    font-weight: 400;
+    font-size: 12px;
+    padding: 4px 6px;
+    border-radius: 4px;
+    background-color: rgba(0, 0, 0, 0.2);
+    margin-left: 8px;
 }
 
 .header__nav li {
     display: inline;
     cursor: pointer;
+    color: var(--black);
 }
 
 .header__nav li a {
@@ -66,7 +72,7 @@
     justify-self: center;
     width: 20px;
     height: 3px;
-    background-color: var(--black300);
+    background-color: var(--black);
     position: absolute;
     top: 50%;
     left: 50%;
@@ -78,7 +84,7 @@
     content: '';
     width: 30px;
     height: 3px;
-    background-color: var(--black300);
+    background-color: var(--black);
     position: absolute;
     right: 0;
     top: 10px;
@@ -89,7 +95,7 @@
     content: '';
     width: 30px;
     height: 3px;
-    background-color: var(--black300);
+    background-color: var(--black);
     position: absolute;
     right: 0;
     bottom: 10px;
@@ -112,8 +118,8 @@
         padding: 20px 10px 20px 40px;
         right: 0;
         top: 68px;
-        background-color: rgba(116, 99, 99, 0.1);
-        backdrop-filter: blur(15px);
+        /* background-color: rgba(116, 99, 99, 0.1); */
+        /* backdrop-filter: blur(15px); */
         z-index: 10000;
     }
 

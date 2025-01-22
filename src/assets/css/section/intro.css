@@ -1,6 +1,5 @@
 #intro {
     height: 100vh;
-    background: #fff;
 }
 
 .intro__inner {
@@ -25,6 +24,7 @@
     line-height: 1;
     font-weight: 800;
     white-space: nowrap;
+    color: var(--black);
 }
 
 .intro__text {
@@ -34,4 +34,5 @@
     display: flex;
     align-items: center;
     justify-content: flex-start;
+    color: var(--black);
 }
