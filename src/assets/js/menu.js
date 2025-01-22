@@ -20,4 +20,14 @@ export function menu() {
     headerNav.addEventListener("click", (e) => {
         e.stopPropagation();
     });
+    
+    // 화면 크기가 801px 이상일 때 메뉴가 열려 있으면 'show' 클래스를 제거
+    window.addEventListener("resize", () => {
+        if (window.innerWidth >= 801) {
+            headerNav.classList.remove("show");
+            navItems.forEach(item => {
+                item.removeAttribute("tabindex"); // 메뉴 닫히면 tabindex 제거
+            });
+        }
+    });
 };
