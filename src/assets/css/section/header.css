@@ -1,3 +1,142 @@
 #header {
-    
+    position: fixed;
+    left: 0;
+    top: 0;
+    width: 100%;
+    z-index: 10000;
+}
+
+.hader__inner {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: rgba(116, 99, 99, 0.1);
+    backdrop-filter: blur(10px);
+    padding: 1rem;
+}
+
+.header__logo {
+    font-size: 1rem;
+    text-align: center;
+    text-transform: uppercase;
+}
+
+.header__logo em {
+    font-size: 10px;
+    color: var(--black200);
+}
+
+.header__nav li {
+    display: inline;
+    cursor: pointer;
+}
+
+.header__nav li a {
+    display: inline-block;
+    padding: 10px;
+    text-transform: uppercase;
+    position: relative;
+    transition: all 0.3s;
+}
+
+.header__nav li a::before {
+    content: '';
+    width: calc(100% - 20px);
+    height: 1px;
+    background-color: var(--black);
+    position: absolute;
+    left: 10px;
+    bottom: 4px;
+    transform: scaleX(0);
+}
+
+.header__nav li:hover a::before {
+    transform: scaleX(1);
+}
+
+.header__nav__mobile {
+    display: none;
+    width: 40px;
+    height: 40px;
+    position: relative;
+}
+
+.header__nav__mobile span {
+    display: flex;
+    justify-self: center;
+    width: 20px;
+    height: 3px;
+    background-color: var(--black300);
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-20%, -50%);
+    transition: all 0.3s;
+}
+
+.header__nav__mobile span::before {
+    content: '';
+    width: 30px;
+    height: 3px;
+    background-color: var(--black300);
+    position: absolute;
+    right: 0;
+    top: 10px;
+    transition: all 0.3s;
+}
+
+.header__nav__mobile span::after {
+    content: '';
+    width: 30px;
+    height: 3px;
+    background-color: var(--black300);
+    position: absolute;
+    right: 0;
+    bottom: 10px;
+    transition: width 0.3s;
+    transition: all 0.3s;
+}
+
+@media (max-width: 800px) {
+    .header__nav {
+        display: none;
+    }
+
+    .header__nav.show {
+        display: block;
+    }
+
+    .header__nav.show ul {
+        display: block;
+        position: absolute;
+        padding: 20px 10px 20px 40px;
+        right: 0;
+        top: 68px;
+        background-color: rgba(116, 99, 99, 0.1);
+        backdrop-filter: blur(15px);
+        z-index: 10000;
+    }
+
+    .header__nav.show li {
+        display: block;
+        text-align: right;
+    }
+
+    .header__nav.show + .header__nav__mobile span {
+        width: 30px;
+        left: 49%;
+        transform: translate(-49%, -50%);
+    }
+
+    .header__nav.show + .header__nav__mobile span::before {
+        width: 20px;
+    }
+
+    .header__nav.show + .header__nav__mobile span::after {
+        width: 20px;
+    }
+
+    .header__nav__mobile {
+        display: block;
+    }
 }
