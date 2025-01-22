@@ -50,4 +50,14 @@ export function menu() {
             });
         }
     });
+
+    // 키보드 탭 순서 제어
+    headerNav.addEventListener('keydown', (e) => {
+        // 포커스가 navItems 마지막 항목에 있을 때, Tab 키를 누르면 메뉴가 닫히도록 하기
+        if (document.activeElement === navItems[navItems.length - 1] && !e.shiftKey) {
+            headerNav.classList.remove('show'); // 메뉴 닫기
+            headerToggle.focus(); // 메뉴가 닫힌 후 headerToggle로 포커스 이동
+            e.preventDefault();
+        }
+    });
 };
