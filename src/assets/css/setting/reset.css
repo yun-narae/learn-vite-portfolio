@@ -90,6 +90,21 @@ button {
     cursor: pointer;
 }
 
+/* 숨김 콘텐츠 */
+
+.sr-only {
+    position: absolute;
+    width: rem(1px);
+    height: rem(1px);
+    margin: rem(-1px);
+    clip: rect(0,0,0,0);
+    clip-path: polygon(0 0, 0 0, 0 0);
+    overflow: hidden;
+    padding: 0;
+    white-space: nowrap;
+    border-width: 0;
+}
+
 /* 스킵메뉴 */
 #skip a {
     position: absolute;
