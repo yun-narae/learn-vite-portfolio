@@ -30,6 +30,7 @@
 
 .skill__desc li {
     margin-bottom: 20vh;
+    word-break: keep-all;
 }
 
 .skill__desc li h3 {
