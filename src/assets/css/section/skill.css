@@ -28,22 +28,22 @@
     margin-left: 8px;
 }
 
-.skill__desc li {
+.skill__wrap li {
     margin-bottom: 20vh;
     word-break: keep-all;
 }
 
-.skill__desc li h3 {
+.skill__wrap li h3 {
     font-size: 1.5rem;
     font-weight: 600;
 }
 
-.skill__desc li h3 span {
+.skill__wrap li h3 span {
     font-size: 3rem;
     margin-right: 8px;
 }
 
-.skill__desc li p {
+.skill__wrap li p {
     margin-top: 0.4rem;
     font-size: 1.1rem;
 }
