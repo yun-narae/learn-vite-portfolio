@@ -42,7 +42,7 @@
     padding: 10px;
     text-transform: uppercase;
     position: relative;
-    transition: all 0.3s;
+    
 }
 
 .header__nav li a::before {
@@ -54,6 +54,7 @@
     left: 10px;
     bottom: 4px;
     transform: scaleX(0);
+    transition: transform 0.3s ease-in-out;
 }
 
 .header__nav li:hover a::before {
@@ -118,8 +119,6 @@
         padding: 20px 10px 20px 40px;
         right: 0;
         top: 68px;
-        /* background-color: rgba(116, 99, 99, 0.1); */
-        /* backdrop-filter: blur(15px); */
         z-index: 10000;
     }
 
