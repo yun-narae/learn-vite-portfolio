@@ -4,7 +4,6 @@
 }
 
 .port__inner {
-    margin: 10vh 0;
     padding: 0 16px;
 }
 
@@ -16,13 +15,16 @@
     text-transform: uppercase;
     word-break: keep-all;
     border-bottom: 1px solid var(--black);
-    margin-bottom: 30px;
 }
 
 .port__title em {
     font-size: 18px;
     white-space: nowrap;
     margin-left: 8px;
+}
+
+.port__inner .arrow {
+    font-size: 2rem;
 }
 
 .port__wrap {
