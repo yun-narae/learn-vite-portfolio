@@ -280,18 +280,41 @@
 
         <!-- contact -->
         <section id="contact">
-                    <form id="contact-form" action="#">
-                        <label for="name">Name *</label>
-                        <input type="text" id="name" name="name" required />
-                  
-                        <label for="email">Email *</label>
-                        <input type="email" id="email" name="email" required />
-                  
-                        <label for="message">Message *</label>
-                        <textarea id="message" name="message" required></textarea>
-                  
-                        <input type="submit" value="Submit" />
-                      </form>         
+            <div class="contact__inner">
+                <h2 class="contact__title">contact</h2>
+                <div class="contact__wrap">
+                    <div class="contact__text">
+                        <div class="text">
+                            <div>
+                                <a href="https://open.kakao.com/o/gM7YLzwf" target="_blank">KAKAO : Webstroyboy</a>
+                            </div>
+                            <div>
+                                <a href="mailto:webstoryboy@naver.com" target="_blank">mail : WEBSTORYBOY@NAVER.COM</a>
+                            </div>
+                        </div>
+                    </div>
+                    <form id="contact__form" class="contact__form" action="#">
+                        <fieldset>
+                            <div class="form__group name">
+                                <label for="name">Name</label>
+                                <input type="text" id="name" name="name" placeholder="Your name" required />
+                            </div>
+                    
+                            <div class="form__group email">
+                                <label for="email">Email</label>
+                                <input type="email" id="email" name="email" placeholder="Your email" required />
+                            </div>
+                    
+                            <div class="form__group message">
+                                <label for="message">Message</label>
+                                <textarea id="message" name="message" placeholder="Your message" required></textarea>
+                            </div>
+                        </fieldset>
+                    
+                        <button type="submit">Submit</button>
+                    </form>
+                </div>
+            </div>            
         </section>
     </main>
 

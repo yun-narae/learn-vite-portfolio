@@ -9,7 +9,7 @@ export function email(e) {
   emailjs.init('uZwXD-cSyW-6lPXgf');  // 공개 키를 통해 초기화
 
   // 폼 요소를 가져옵니다.
-  const form = document.getElementById('contact-form');
+  const form = document.getElementById('contact__form');
 
   // emailjs의 sendForm 메서드를 사용하여 이메일 전송
   emailjs
